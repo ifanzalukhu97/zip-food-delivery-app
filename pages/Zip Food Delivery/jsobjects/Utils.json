@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Utils",
+    "pageId": "Zip Food Delivery",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\taddOrder: async () => {\n\t\tconst orderId = this.generateRandomID();\n\t\tawait add_order.run({ id: orderId });\n\t\tawait add_product.run({ id: orderId });\n\t\tawait fetch_orders.run();\n\t\tawait resetWidget('add_modal');\n\t\treturn closeModal('add_modal');\n\t},\n\t\n\tgenerateRandomID: () => {\n\t\treturn '_' + Math.random().toString(36).substring(2,9)\n\t}\n}",
+    "variables": []
+  },
+  "id": "Zip Food Delivery_Utils",
+  "deleted": false,
+  "gitSyncId": "62c8fdb701213a676a34f7fd_62c92b1c01213a676a350318"
+}
